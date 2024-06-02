@@ -1,12 +1,38 @@
-# String-Algorims-Dynamic-Programming-Multithreading
-In this body of work, we implement String Searching algorithms including the Naive Algorithm, the Boyer Moore algorithm, and the KMP algorithm. We then implement Dynamic Programming solutions to solve the Knapsack Problem, and the Longest Common Subsequence. We finally implement some multithreading matrix multiplication for a 100x100 matrix.
+# String Searching Algorithms and Dynamic Programming Solutions
+## Overview
+This project explores various string searching algorithms including the Naive Algorithm, Boyer Moore algorithm, and the Knuth-Morris-Pratt (KMP) algorithm. Additionally, it implements Dynamic Programming solutions to tackle the Knapsack Problem and the Longest Common Subsequence problem. Furthermore, multithreading techniques are applied for efficient matrix multiplication.
 
-To expand on this a smidgeon. We begin with String Searching algorithms. These algorithms that we're going to look at are used to search a large body of text for a pattern, or an item of subtext. To obtain data for this, we first scrape the HBO website, for the publically available Chernobyl Miniseries transcript per episode. We then convert the obtained PDF's into a list of 5 (per episode) bodies of text. We then check the count per episode for certain keywords (e.g. Comrade, Graphite, Roentgen) using the Naive Algoritm, Boyer Moore, and the KMP algorithm. We use the calculation runtime of each algorithm as our comparison. 
+## String Searching Algorithms
+ - Naive Algorithm: Basic pattern searching method that slides the pattern one by one and checks for a match.
+ - Boyer Moore Algorithm: Efficient algorithm that preprocesses the pattern and skips characters in the text based on mismatch cases.
+ - Knuth-Morris-Pratt (KMP) Algorithm: Algorithm that preprocesses the pattern to create a partial match table, allowing it to skip unnecessary comparisons.
 
-We also solve the Knapsack problem, using a Brute Force method, then by being more clever about things, and usuing a Dynamic approach. Dynamic Programming essentially involves breaking a big problem, down into smaller problems and solving those problems first. The overall problem often contains multiple occurences of the same subproblem, hence, by having already solved the sub problem, we can use this result and not have to calculate it, saving on runtime. This sub-result, is either saved through tabulation, or memoization. We use Dlynamic Programming to solve both the KnapSack problem, and the Longest Common Subsequence problem. 
+### Data Collection
+ - Source: HBO website for the Chernobyl Miniseries transcripts.
+ - Process: Scraped PDFs converted into text bodies for each episode.
+### Keyword Analysis
+ - Keywords: Analyzed counts of keywords like "Comrade," "Graphite," and "Roentgen" per episode using all three string searching algorithms.
+ - Comparison: Runtime analysis of each algorithm for keyword counts per episode.
 
-We finally perform some multithreading to multiply together two matrices using the threading package. During matrix multiplication, each element in the resultant matrix can be calculated independant of one another. Therefore, using the threading package, we assign a certain amount of rows (0.25 in our case) to a thread, calculating each segment simultaneously, and then rejoining our threads. 
+## Dynamic Programming
+### Knapsack Problem
+ - Approaches: Implemented both Brute Force and Dynamic Programming approaches.
+ - Benefits: Dynamic Programming optimizes by storing solutions to overlapping subproblems, improving runtime efficiency.
+### Longest Common Subsequence
+ - Method: Dynamic Programming used to find the longest subsequence common to all sequences in a set of sequences.
 
-Algorithms used: Naive Algorithm, Boyer Moore Algorithm, KMP, Dyanmic Programming to solve Knapsack & Longest Common Subsequence,
+## Multithreading Matrix Multiplication
+ - Objective: Efficiently multiply two matrices using Python's threading package.
+ - Process: Divided matrix rows among threads for parallel computation, enhancing performance.
 
-Packages used: matplotlib, requests,BeautifulSoup, pdfplumber, pandas, numpy, time, threading
+## Packages Used
+ - matplotlib: For plotting runtime comparisons.
+ - requests, BeautifulSoup, pdfplumber: For web scraping and PDF parsing.
+ - pandas, numpy: For data manipulation and algorithm implementation.
+ - time: For runtime analysis.
+ - threading: For multithreaded matrix multiplication.
+
+## Conclusion
+This project provides a comprehensive exploration of string searching algorithms, Dynamic Programming solutions, and multithreading techniques. By analyzing Chernobyl Miniseries transcripts and implementing various algorithms, it demonstrates practical applications in text analysis, optimization problems, and parallel computing.
+
+Contributions and feedback are welcome to enhance the functionality and expand the capabilities of this project.
